@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar Valores</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+        }
+        input {
+            width: 100px;
+        }
+        div#res {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando dois Valores</h1>
+    <input type="number" name="txtNum1" id="txtNum1" placeholder="numero 1"> + 
+    <input type="number" name="txtNum2" id="txtNum2">
+    <!-- <input type="button" value="Somar" onclick="somar()"> -->
+    <input type="button" value="Somar" id="somarVal">
+    <div id="res">Resultado</div>
+
+    <script>
+        // utilizar listener para realizar soma
+        var somarVal = window.document.getElementById('somarVal')
+        somarVal.addEventListener('click', somar)
+        function somar() {
+            // capturar valores do input
+            var txtNum1= window.document.getElementById('txtNum1')
+            var txtNum2 = window.document.getElementsByName('txtNum2')[0]
+            // transformar valores em números
+            var num1 = Number(txtNum1.value)
+            var num2 = Number(txtNum2.value)
+            var adicao = (num1 + num2)
+            //exibir resultado
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `A soma entre os números ${num1} e ${num2} é igual à: <strong>${adicao.toFixed(2)}</strong>.`
+        }
+    </script>
+</body>
+</html>

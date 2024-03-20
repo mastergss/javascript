@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Passos</title>
+    <link rel="stylesheet" href="contar_passos.css">
+</head>
+<body>
+    <header>
+        <h1>Contador de Passos</h1>
+    </header>
+    <section>
+        <div>
+            <p>Início: 
+                <input type="number" name="txtnum" id="numIni" min="0">
+            </p>
+            <p>Fim: 
+                <input type="number" name="txtnum" id="numFim" min="1">
+            </p>
+            <p>Passos: 
+                <input type="number" name="txtnum" id="numPas" min="1">
+            </p>
+            <p>
+                <input type="button" value="Contar" onclick="contar()">
+            </p>
+        </div>
+        <div id="res">
+            Iniciando a contagem...
+        </div>
+    </section>
+    <footer>
+        <p>&copy;CursoemVideo</p>
+    </footer>
+    <script src="contar_passos.js"></script>
+</body>
+</html>

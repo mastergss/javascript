@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificar Nacionalidade</h1>
+    <p>Informe o País: 
+        <input type="text" name="txtPais" id="txtPais">
+        <input type="button" value="Verificar" id="btnVerificar">
+    </p>
+    <div id="res"></div>
+
+    <script>
+        var txtPais = window.document.getElementsByName('txtPais')[0]
+        var res = window.document.querySelector('div#res')
+        var ver = window.document.getElementById('btnVerificar')
+        ver.addEventListener('click', verificarNac)
+
+        function verificarNac() {
+            res.innerHTML = `<p>Você está vivendo no <strong>${txtPais.value}</strong>.</p>`
+            if (txtPais.value.toLocaleUpperCase() !== 'BRASIL') {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>!</p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idade</title>
+    <style>
+      input#txtidade {
+        width: 55px;
+        border-radius: 10px;
+      }
+      input#btn_conf {
+        background-color: rgba(0, 128, 0, 0.800);
+        font: bold 15px Arial;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Verificar Idade</h1>
+
+    Informe sua Idade:
+    <input type="number" name="txtidade" id="txtidade" /> anos.
+    <input type="button" value="Confirmar" id="btn_conf" onclick="confirmar()" />
+    <div id="res"></div>
+
+    <script>
+      function confirmar() {
+        var idade = Number(document.querySelector("input#txtidade").value);
+        console.log(idade);
+        var msg = document.querySelector("div#res");
+        msg.innerHTML = `<p>Sua idade é ${idade} anos.</p>`;
+        if (idade == 18) {
+          msg.innerHTML += `<p>Você tem idade para <strong>votar!</strong></p>`;
+        } else {
+          msg.innerHTML += `<p>Você ainda não tem idade para <strong>votar!</strong></p>`;
+        }
+        msg.innerHTML += "Exerça seu direito de cidadão. Vote consciente!";
+      }
+    </script>
+  </body>
+</html>

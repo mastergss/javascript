@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06</title>
+    <style>
+        body{
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        document.write(`Seu nome é ${nome}! e seu nome tem ${nome.length} letras.</br>`)
+        document.write(`Seu nome em MAIÚSCULAS é ${nome.toUpperCase()}.</br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.</br>`)
+        
+        var salario = Number.parseFloat(window.prompt('Qual é o seu salário?'))
+        document.write(`${nome} o seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})}`)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* Folha de Estilo Modelo CSS */
+body {
+    background-color: rgba(60, 60, 255);
+    font: normal 16px Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    padding: 16px;
+    width: 500px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 5px 5px 10pt rgba(0, 0, 0, 0.608);
+
+    div {
+        text-align: center;
+    }
+}
+
+footer {
+    color: white;
+    text-align: center;
+}

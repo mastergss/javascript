@@ -1,0 +1,21 @@
+body {
+    background-color: rgba(55, 90, 155, 0.897);
+    color: white;
+    font: normal 15pt Garamond;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    color: black;
+    width: 400px;
+    text-align: start;
+    padding: 15px;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.637);
+}
+
+footer {
+    font-style: italic;
+}
